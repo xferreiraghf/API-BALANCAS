@@ -26,4 +26,5 @@ O servidor Flask será iniciado e estará ouvindo em http://localhost:5000/ por 
 * O Flask então lê o conteúdo desse arquivo e o retorna como uma resposta JSON quando a rota é acessada.
 * Se o arquivo de saída não for encontrado, uma mensagem de erro é retornada em vez do conteúdo.
 
+
 Esta documentação fornece uma visão geral do aplicativo Flask e do script VBS associado, explicando como configurar, executar e entender seu funcionamento.
