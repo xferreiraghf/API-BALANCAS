@@ -3,7 +3,7 @@ import os
 import subprocess
 
 app = Flask(__name__)
-filename = 'output.txt'
+filename = 'retorno.txt'
 vbs_file = 'script.vbs' 
 
 @app.route('/')
