@@ -35,7 +35,7 @@ Este script Python implementa um servidor Flask que disponibiliza uma rota **/lo
 * Se o arquivo existe, lê os dados do arquivo e retorna um objeto JSON contendo as unidades de peso (kg) e o valor do peso.
 * Se o arquivo não existe, retorna um objeto JSON indicando um erro de arquivo não encontrado.
 
-# Função __main__
+# Função '__main__'
 Inicia o servidor Flask na porta **5000**, tornando-o acessível a partir de qualquer interface de rede (**0.0.0.0**).
 
 # Conclusão
