@@ -3,17 +3,22 @@ import os
 import subprocess
 
 app = Flask(__name__)
-filename = 'retorno.txt'
-vbs_file = 'script.vbs' 
+filename = 'C:/balanca/PesoBal.BAL'
+vbs_file = 'script.vbs'
+exe_file = 'C:/balanca/vbpBalanca.exe'  
 
-@app.route('/')
+@app.route('/load-scale')
 def read_file():
+
+    subprocess.run([exe_file], shell=True)
+    
     subprocess.run(['cscript.exe', vbs_file], shell=True)
 
     if os.path.exists(filename):
-        with open(filename, 'r', encoding='utf-16') as file:
-            data = file.read()
-        return jsonify({'data': data})
+        with open(filename, 'r', encoding='utf-8') as file:
+            data = file.read().rstrip('\n')
+            file.close()
+        return jsonify({'unit': "kg", 'value': data})
     else:
         return jsonify({'error': 'Arquivo nao encontrado'})
 
